@@ -18,9 +18,9 @@ jobs:
   deploy:    
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
-
+    env:
+      thesecretis: secrets.thesecret
     steps:
       - name: Set as env var
-        run: echo "thesecretis=${{ secrets.thesecret }}" >> $GITHUB_ENV
       - name: Use the value
-        run: echo "${{ env.thesecretis }}"
+        run: echo "${{ env.thesecret }}"
