@@ -19,8 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: OUTPUT=${{ secrets.thesecret }} && echo ${OUTPUT}
+      - name: Set as env var
+        run: echo "thesecretis=${{ secrets.thesecret }}" >> $GITHUB_ENV
+      - name: Use the value
+        run: echo ${{ env.thesecretis }}
