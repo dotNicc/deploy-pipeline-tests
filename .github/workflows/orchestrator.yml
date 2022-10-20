@@ -11,11 +11,11 @@ jobs:
       environment: dev
     # secrets: inherit
     secrets:
-      thesecret: ${{ secrets.thesecret }}
+      thesecret: ${{ secrets.MYBIGFATSECRET }}
   
   deploy-prod:    
     uses: dotNicc/pipeline-poc/.github/workflows/reuse.yml@main
     with:
       environment: prod
     secrets:
-      thesecret: ${{ secrets.thesecret }}
+      thesecret: ${{ secrets.MYBIGFATSECRET }}
