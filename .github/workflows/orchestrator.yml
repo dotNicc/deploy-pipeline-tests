@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy_dev:
+  deploy-dev:
     runs-on: ubuntu-latest
     environment: dev
 
@@ -15,7 +15,7 @@ jobs:
         with:
           thesecret: ${{ secrets.MYBIGFATSECRET }}
   
-  deploy_prod:
+  deploy-prod:
     runs-on: ubuntu-latest
     environment: prod
     
