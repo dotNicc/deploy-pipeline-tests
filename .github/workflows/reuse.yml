@@ -23,4 +23,4 @@ jobs:
       - name: Set as env var
         run: echo "thesecretis=${{ secrets.thesecret }}" >> $GITHUB_ENV
       - name: Use the value
-        run: echo ${{ env.thesecretis }}
+        run: echo "${{ env.thesecretis }}"
