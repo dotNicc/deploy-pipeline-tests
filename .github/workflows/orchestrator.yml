@@ -6,13 +6,16 @@ on:
 
 jobs:
   deploy-dev:
-    # secrets: inherit
     uses: croesusfin/pipeline-poc/.github/workflows/reuse.yml@main
     with:
       environment: dev
+    # secrets: inherit
+    secrets:
+      thesecret: ${{ secrets.thesecret }}
   
   deploy-prod:    
     uses: croesusfin/pipeline-poc/.github/workflows/reuse.yml@main
-    # secrets: inherit
     with:
       environment: prod
+    secrets:
+      thesecret: ${{ secrets.thesecret }}
