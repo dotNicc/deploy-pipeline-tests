@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy-dev:
-    uses: croesusfin/pipeline-poc/.github/workflows/reuse.yml@main
+    uses: dotNicc/pipeline-poc/.github/workflows/reuse.yml@main
     with:
       environment: dev
     # secrets: inherit
@@ -14,7 +14,7 @@ jobs:
       thesecret: ${{ secrets.thesecret }}
   
   deploy-prod:    
-    uses: croesusfin/pipeline-poc/.github/workflows/reuse.yml@main
+    uses: dotNicc/pipeline-poc/.github/workflows/reuse.yml@main
     with:
       environment: prod
     secrets:
