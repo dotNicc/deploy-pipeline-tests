@@ -22,4 +22,4 @@ jobs:
       thesecretis: ${{ secrets.thesecret }}
     steps:
       - name: Echo value (if correct, will be masked)
-        run: echo "${{ secrets.MYBIGFATSECRET }}"
+        run: echo "${{ env.thesecretis }}"
