@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
     env:
-      thesecretis: secrets.thesecret
+      thesecretis: ${{ secrets.thesecret }}
     steps:
       - name: Echo value (if correct, will be masked)
         run: echo "${{ env.thesecretis }}"
