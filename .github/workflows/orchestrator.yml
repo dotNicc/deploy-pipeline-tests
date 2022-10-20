@@ -6,21 +6,13 @@ on:
 
 jobs:
   deploy-dev:
-    runs-on: ubuntu-latest
-    environment: dev
-
-    steps:     
-      - uses: croesusfin/pipeline-poc/.github/workflows/reuse.yml@main
-      # secrets: inherit
-        with:
-          thesecret: ${{ secrets.MYBIGFATSECRET }}
+    # secrets: inherit
+    uses: croesusfin/pipeline-poc/.github/workflows/reuse.yml@main
+    with:
+      environment: dev
   
-  deploy-prod:
-    runs-on: ubuntu-latest
-    environment: prod
-    
-    steps:
-      - uses: croesusfin/pipeline-poc/.github/workflows/reuse.yml@main
-      # secrets: inherit
-        with:
-          thesecret: ${{ secrets.MYBIGFATSECRET }}
+  deploy-prod:    
+    uses: croesusfin/pipeline-poc/.github/workflows/reuse.yml@main
+    # secrets: inherit
+    with:
+      environment: prod
