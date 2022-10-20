@@ -1,15 +1,7 @@
-# This is a basic workflow to help you get started with Actions
-
 name: orchestrator
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
   workflow_dispatch:
 
 jobs:
@@ -17,9 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: dev
 
-    steps:
-      - uses: actions/checkout@v3
-      
+    steps:     
       - uses: croesusfin/pipeline-poc/.github/workflows/reuse.yml@main
       # secrets: inherit
         with:
