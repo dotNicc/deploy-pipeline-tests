@@ -14,6 +14,7 @@ jobs:
       thesecret: ${{ secrets.MYBIGFATSECRET }}
   
   deploy-prod:    
+    needs: deploy-dev
     uses: dotNicc/pipeline-poc/.github/workflows/reuse.yml@main
     with:
       environment: prod
