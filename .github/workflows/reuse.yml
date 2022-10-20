@@ -21,6 +21,5 @@ jobs:
     env:
       thesecretis: secrets.thesecret
     steps:
-      - name: Set as env var
-      - name: Use the value
+      - name: Echo value (if correct, will be masked)
         run: echo "${{ env.thesecret }}"
